@@ -34,6 +34,12 @@
   font-weight: 700;
 }
 
+@font-face {
+  font-family: 'Bebas Neue Cyrillic';
+  src: url(../fonts/Bebas_Neue_Cyrillic.ttf);
+  font-weight: 400;
+}
+
 body {
   margin: 0;
 }
@@ -65,10 +71,1243 @@ img {
 }
 
 .container {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 
-  max-width: 375px;
+  max-width: 360px;
+}
+
+.section {
+  padding: 60px 0;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+/* header */
+
+.header {
+  padding-top: 20px;
+  padding-bottom: 60px;
+
+  max-width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: url(../img/header/mobile-background-1x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .header {
+    background-image: url(../img/header/mobile-background-2x.jpg);
+  }
+}
+
+.start-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.start-container .start-text {
+  color: #2a2a2a;
+  font-family: 'Futura PT';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.start-border {
+  margin-bottom: 40px;
+}
+
+.start-border::after {
+  content: '';
+  display: block;
+
+  width: 100%;
+  height: 1px;
+
+  background: #f0e1d5;
+
+  margin-top: 20px;
+}
+
+.header-title {
+  color: #ce9c72;
+  font-family: 'Bebas Neue Cyrillic';
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 80%; /* 61.6px */
+  text-transform: uppercase;
+}
+
+.header-subtitle {
+  color: #2a2a2a;
+  font-family: 'Bebas Neue Cyrillic';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 32.4px */
+  text-transform: uppercase;
+
+  margin-bottom: 200px;
+}
+
+.header-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+
+  margin-bottom: 15px;
+}
+
+.header-list .list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #2a2a2a;
+  text-align: center;
+  font-family: 'Futura PT';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 13.5px */
+  letter-spacing: -0.3px;
+
+  padding: 12px 5px;
+  border-radius: 7px;
+  border: 1px solid #ce9c72;
+  background: #fff;
+}
+
+.header-list .list-item:nth-child(1) {
+  max-width: 163px;
+}
+.header-list .list-item:nth-child(2) {
+  max-width: 152px;
+}
+.header-list .list-item:nth-child(3) {
+  max-width: 163px;
+}
+.header-list .list-item:nth-child(4) {
+  max-width: 152px;
+}
+
+.header-button-container {
+  position: relative;
+
+  max-width: 345px;
+  margin: 0 auto;
+
+  animation: pulseScale 2000ms infinite;
+}
+
+.header-button {
+  display: block;
+
+  color: #f6f6f6;
+  text-align: center;
+  font-family: 'Futura PT';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+  text-transform: uppercase;
+
+  padding: 12px;
+  border-radius: 20px;
+  background: #ce9c72;
+}
+
+/* header-sale-mark */
+
+.header-sale-mark {
+  position: absolute;
+  top: -25px;
+  right: -10px;
+}
+
+.sale-mark {
+  position: relative;
+
+  animation: spin 2s linear infinite;
+  animation-duration: 10s;
+}
+
+.rotate {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sale-number {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transform: translate(-50%, -50%);
+
+  color: #fff;
+  font-family: 'Futura PT';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30%;
+  text-transform: uppercase;
+}
+
+/* bonus */
+
+.bonus {
+  padding-bottom: 60px;
+}
+
+.bonus-title {
+  color: #ce9c72;
+  text-align: center;
+  font-family: 'Futura PT';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 20px */
+  letter-spacing: -0.6px;
+  text-transform: uppercase;
+
+  max-width: 232px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.bonus-title span {
+  color: #2a2a2a;
+}
+
+.bonus-image {
+  margin-bottom: 20px;
+}
+
+/* timer */
+
+.countdown {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.countdown-time {
+  display: block;
+  color: #2a2a2a;
+  text-align: center;
+  font-family: 'Futura PT';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: -0.56px;
+  width: 70px;
+}
+
+.countdown-doubledot {
+  content: '';
+  display: flex;
+  height: 25px;
+  width: 1px;
+  background: #2a2a2a;
+  margin: 0 auto;
+}
+
+/* statistics */
+
+.statistics {
+  background: #fce6d4;
+}
+
+.created-wrapper {
+  padding: 25px 19px;
+  border-radius: 10px;
+  background: #fff;
+  max-width: 320px;
+  margin: 0 auto;
+  margin-bottom: 45px;
+}
+
+.created-wrapper .wrapper-title {
+  color: #ce9c72;
+  font-family: 'Bebas Neue Cyrillic';
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.created-wrapper .wrapper-desc {
+  color: #ce9c72;
+  font-family: 'Futura PT';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%; /* 17.6px */
+  letter-spacing: -0.48px;
+
+  margin-bottom: 10px;
+}
+
+.created-wrapper .wrapper-desc-text {
+  color: #2a2a2a;
+  font-family: 'Futura PT';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: -0.48px;
+}
+
+.created-wrapper .wrapper-desc-text span {
+  font-weight: 500;
+}
+
+.created-wrapper .wrapper-desc-text.margin {
+  margin-bottom: 10px;
+}
+
+.statistics-title {
+  color: #2a2a2a;
+  text-align: center;
+  font-family: 'Bebas Neue Cyrillic';
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.statistics-subtitle {
+  color: #2a2a2a;
+  text-align: center;
+  font-family: 'Futura PT';
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 100%; /* 19px */
+  letter-spacing: -0.57px;
+
+  margin-bottom: 20px;
+}
+
+.statistics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  max-width: 261px;
+  margin: 0 auto;
+}
+
+.statistics-list .list-item {
+  color: #2a2a2a;
+  text-align: center;
+  font-family: 'Futura PT';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 16px */
+  letter-spacing: -0.48px;
+
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.statistics-list .list-item span {
+  color: #ce9c72;
+  font-weight: 500;
+}
+
+/* propose */
+
+.propose-title {
+  color: #ce9c72;
+  font-family: 'Bebas Neue Cyrillic';
+  font-size: 41px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.propose-desc {
+  color: #2a2a2a;
+  font-family: 'Futura PT';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 110%; /* 19.8px */
+  letter-spacing: -0.54px;
+
+  max-width: 299px;
+}
+
+/* get */
+
+.get {
+  position: relative;
+}
+
+.get .line {
+  position: absolute;
+  right: 0;
+  top: 78px;
+
+  display: block;
+
+  width: 38%;
+  height: 1px;
+
+  background: #ce9c72;
+}
+
+.get-title {
+  color: #2a2a2a;
+  font-family: 'Bebas Neue Cyrillic';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+
+  max-width: 271px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.get-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.get-list .list-item {
+  color: #2a2a2a;
+  text-align: center;
+  font-family: 'Futura PT';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 14.4px */
+  letter-spacing: -0.32px;
+
+  padding: 20px;
+  border-radius: 10px;
+  background: #fce6d4;
+}
+
+/* about-course */
+
+.about-course {
+  background: #ce9c72;
+}
+
+.about-course-title {
+  color: #fff;
+  text-align: center;
+  font-family: 'Bebas Neue Cyrillic';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+
+  max-width: 220px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.about-course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.about-course-list .list-item {
+  color: #2a2a2a;
+  text-align: center;
+  font-family: 'Futura PT';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 14.4px */
+  letter-spacing: -0.32px;
+
+  padding: 20px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+/* about-author */
+
+.about-author {
+  background-image: url(../img/about-author/background-mobile-1x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .about-author {
+    background-image: url(../img/about-author/background-mobile-2x.jpg);
+  }
+}
+
+.about-author .container {
+  padding-left: 0;
+  padding-right: 0;
+
+  max-width: 428px;
+}
+
+.about-auhtor-title {
+  color: #ce9c72;
+  font-family: 'Bebas Neue Cyrillic';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+
+  padding-left: 30px;
+
+  margin-bottom: 250px;
+}
+
+.author-container {
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.8);
+
+  max-width: 280px;
+  width: 100%;
+  margin-right: 0;
+  margin-left: auto;
+
+  margin-bottom: 85px;
+}
+
+.author-name {
+  color: #2a2a2a;
+  font-family: 'Futura PT';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 90%; /* 13.5px */
+
+  margin-bottom: 5px;
+}
+
+.author-text {
+  color: #2a2a2a;
+  font-family: 'Futura PT';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 12.6px */
+
+  max-width: 230px;
+}
+
+/* author-description-container */
+
+.desc-box-one {
+  display: flex;
+
+  margin-bottom: 30px;
+}
+
+.desc-box-one::before {
+  content: '';
+  display: flex;
+
+  width: 30px;
+  height: 1px;
+
+  margin-top: 5px;
+  margin-right: 10px;
+
+  background: #ce9c72;
+}
+
+.desc-box-one .desc-title {
+  color: #2a2a2a;
+  font-family: 'Futura PT';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 90%; /* 16.2px */
+}
+.desc-box-one .desc-text {
+  color: #2a2a2a;
+  font-family: 'Futura PT';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 95%; /* 14.25px */
+
+  max-width: 213px;
+}
+
+.desc-box-two {
+  display: flex;
+
+  margin-bottom: 30px;
+}
+
+.desc-box-two::before {
+  content: '';
+  display: flex;
+
+  width: 60px;
+  height: 1px;
+
+  margin-top: 5px;
+  margin-right: 10px;
+
+  background: #ce9c72;
+}
+
+.desc-box-two .desc-title {
+  color: #2a2a2a;
+  font-family: 'Futura PT';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 90%; /* 16.2px */
+
+  margin-bottom: 5px;
+}
+
+.desc-box-two .desc-text {
+  color: #2a2a2a;
+  font-family: 'Futura PT';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 95%; /* 14.25px */
+
+  max-width: 210px;
+}
+
+.desc-box-three {
+  display: flex;
+}
+
+.desc-box-three::before {
+  content: '';
+  display: flex;
+
+  width: 120px;
+  height: 1px;
+
+  margin-top: 5px;
+  margin-right: 10px;
+
+  background: #ce9c72;
+}
+
+.desc-box-three .desc-title {
+  color: #ce9c72;
+  font-family: 'Futura PT';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 90%; /* 16.2px */
+
+  margin-bottom: 5px;
+}
+
+.desc-box-three .desc-text {
+  color: #ce9c72;
+  font-family: 'Futura PT';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 95%; /* 14.25px */
+
+  max-width: 210px;
+}
+
+/* share */
+
+.share {
+}
+
+.share-title {
+  color: #2a2a2a;
+  text-align: center;
+  font-family: 'Bebas Neue Cyrillic';
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+}
+
+.share-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  max-width: 262px;
+  margin: 0 auto;
+
+  margin-bottom: 100px;
+}
+
+.share-list .list-item {
+  color: #2a2a2a;
+  text-align: center;
+  font-family: 'Futura PT';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 16px */
+  letter-spacing: -0.48px;
+
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: #ffeee0;
+}
+
+.attention {
+  display: block;
+  color: #ce9c72;
+  text-align: center;
+  font-family: 'Bebas Neue Cyrillic';
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%; /* 36.3px */
+  text-transform: uppercase;
+}
+
+.attention-text {
+  color: #2a2a2a;
+  text-align: center;
+  font-family: 'Futura PT';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 110%;
+  text-transform: uppercase;
+  max-width: 217px;
+  margin: 0 auto;
+}
+
+/* course-program */
+
+.course-program {
+  background: #ce9c72;
+}
+
+.course-program-title {
+  color: #fce6d4;
+  text-align: center;
+  font-family: 'Bebas Neue Cyrillic';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+
+  margin-bottom: 30px;
+}
+
+/* faq-01 */
+
+.faq {
+  margin-bottom: 50px;
+}
+
+.isOpen .content {
+  display: block;
+}
+
+.question {
+  border-radius: 20px;
+  background: #fff;
+  backdrop-filter: blur(2px);
+
+  padding: 30px 20px;
+
+  max-width: 320px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-bottom: 10px;
+
+  backdrop-filter: blur(2px);
+}
+
+.content {
+  display: none;
+}
+
+.content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  padding: 20px 0 0 30px;
+  margin: 0;
+}
+
+.content ul li {
+  color: #2a2a2a;
+  font-family: 'Futura PT';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%; /* 16.5px */
+
+  max-width: 225px;
+}
+
+.question-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.question-name > p {
+  color: #2a2a2a;
+  font-family: 'Futura PT';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 100%; /* 15px */
+
+  max-width: 226px;
+}
+
+.question-name > p span {
+  color: #fff;
+  text-align: center;
+  font-family: 'Futura PT';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 12px */
+  text-transform: uppercase;
+
+  border-radius: 5px;
+  background: #ce9c72;
+
+  padding: 5px;
+
+  max-width: 80px;
+  width: 100%;
+}
+
+.question-plus {
+  transform: rotate(0);
+
+  transition: transform 250ms linear;
+}
+.question.open .question-plus {
+  transform: rotate(180deg);
+}
+
+.last-question {
+  margin-bottom: 0;
+}
+
+.price {
+  text-align: center;
+  font-family: 'Futura PT';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 40px */
+  letter-spacing: -0.8px;
+
+  margin-bottom: 15px;
+}
+
+.price span {
+  text-decoration: line-through;
+}
+
+.course-program .price {
+  color: #fff;
+}
+
+.course-program .price span {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.course-program .header-button {
+  color: #2a2a2a;
+  background: #ffeee0;
+}
+
+/* how-going */
+
+.how-going .container {
+  padding-left: 0;
+  padding-right: 0;
+
+  max-width: 428px;
+  width: 100%;
+}
+
+.how-going-title {
+  color: #ce9c72;
+  font-family: 'Bebas Neue Cyrillic';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+
+  max-width: 281px;
+
+  margin-bottom: 30px;
+
+  padding-left: 40px;
+}
+
+.how-going-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 20px;
+}
+
+.how-going-list .item-text {
+  color: #171717;
+  font-family: 'Futura PT';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%; /* 14.3px */
+
+  width: 260px;
+}
+
+.how-going-list .item-box {
+  display: flex;
+}
+
+.how-going-list .item-box::before {
+  content: '';
+  display: block;
+
+  min-width: 30px;
+  max-width: 80px;
+  height: 1px;
+
+  background: #ce9c72;
+
+  margin-top: 6px;
+  margin-right: 10px;
+}
+
+/* invest */
+
+.invest-title {
+  color: #2a2a2a;
+  text-align: center;
+  font-family: 'Bebas Neue Cyrillic';
+  font-size: 29px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+}
+
+.invest-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  max-width: 262px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.invest-list .list-item {
+  color: #2a2a2a;
+  text-align: center;
+  font-family: 'Futura PT';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 16px */
+  letter-spacing: -0.48px;
+
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: #ffeee0;
+}
+
+.go-reg {
+  display: block;
+  color: #2a2a2a;
+  text-align: center;
+  font-family: 'Futura PT';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 100%; /* 16px */
+  letter-spacing: -0.48px;
+
+  margin-bottom: 80px;
+}
+
+.invest .price {
+  color: #ce9c72;
+}
+
+.invest .price span {
+  color: rgba(206, 156, 114, 0.4);
+}
+
+/* question-section */
+
+.question-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #ce9c72;
+}
+
+.question-title {
+  color: #fae2cf;
+  text-align: center;
+  font-family: 'Bebas Neue Cyrillic';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-bottom: 30px;
+}
+
+/* faq-02 */
+
+.isOpen .content-two {
+  display: block;
+}
+
+.question-two {
+  position: relative;
+
+  border-radius: 20px;
+  background: #fff;
+  backdrop-filter: blur(2px);
+
+  padding: 20px;
+
+  max-width: 320px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-bottom: 10px;
+
+  cursor: pointer;
+}
+
+.last-question {
+  margin-bottom: 0;
+}
+
+.content-two {
+  display: none;
+}
+
+.content-two p {
+  color: #171717;
+  font-family: 'Futura PT';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%; /* 13.2px */
+
+  padding-top: 10px;
+}
+
+.question-two-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.question-two-name > p {
+  color: #171717;
+  font-family: 'Futura PT';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 100%; /* 15px */
+
+  max-width: 226px;
+}
+
+.question-plus {
+  transform: rotate(0);
+
+  transition: transform 250ms linear;
+}
+.question-two.open .question-plus {
+  transform: rotate(180deg);
+}
+
+/* footer */
+
+.footer {
+  background: #101010;
+}
+
+.footer-deals::after {
+  content: '';
+  display: block;
+
+  width: 100px;
+  height: 1px;
+
+  margin: 20px auto;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    #fff 52.6%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.deals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.deals-list .list-item a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-family: 'Futura PT';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* mail */
+
+.footer-social-container {
+  margin-bottom: 30px;
+}
+
+.mail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.mail-link {
+  color: #fff;
+  font-family: 'Futura PT';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: none;
+}
+
+/* fop */
+
+.fop-container {
+  margin-bottom: 60px;
+}
+
+.fop-name {
+  color: #fff;
+  text-align: center;
+  font-family: 'Futura PT';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+}
+
+/* disign creator */
+
+.disign-creator-link {
+  display: block;
+}
+
+.disign-creator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  padding: 7px;
+  border-radius: 40px;
+  border: 0.3px solid #ffffff88;
+
+  max-width: 189px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.create-by-text {
+  color: #fff;
+  font-family: 'Futura PT';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
