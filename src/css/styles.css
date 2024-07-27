@@ -1105,6 +1105,11 @@ img {
   color: rgba(206, 156, 114, 0.4);
 }
 
+.invest .header-sale-mark {
+  top: unset;
+  bottom: 20px;
+}
+
 /* question-section */
 
 .question-section {
