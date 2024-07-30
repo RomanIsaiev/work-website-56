@@ -1113,6 +1113,54 @@ img {
   top: unset;
   bottom: 20px;
 }
+/* reviews */
+
+.reviews .container {
+  padding: 0;
+}
+
+.reviews-container {
+  position: relative;
+}
+
+.reviews-title {
+  color: #ce9c72;
+  text-align: center;
+  font-family: 'Bebas Neue Cyrillic';
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.swiper {
+  cursor: pointer;
+}
+
+.mySwiper1 {
+  max-width: 428px;
+}
+
+.swiper-slide {
+  width: 250px;
+  height: 250px;
+}
+
+.swiper-slide img {
+  display: block;
+  max-width: 250px;
+  width: 100%;
+}
+
+.swiper-wrapper {
+  margin-bottom: 40px;
+}
+
+.swiper-pagination {
+  --swiper-pagination-color: #ce9c72;
+}
 
 /* question-section */
 
